@@ -1,9 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
 import { parseReplay } from "./parser.mjs";
 
-const url = "";
-const key = "";
-const supabase = createClient(url, key);
+const supabaseUrl = 'https://hfdcnrnqtmolytcbtpmx.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmZGNucm5xdG1vbHl0Y2J0cG14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzgxOTkyODcsImV4cCI6MTk5Mzc3NTI4N30.tzor28ksaYcobFFzhdauJqVaET04SXdPzf608GWlX6Q';
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 console.log("fetching files");
 const listResponse = await supabase.storage.from("replays").list("", {

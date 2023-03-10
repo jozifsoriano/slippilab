@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    container_name: slippilab
+    ports:
+      - 8080:8080
+    stdin_open: true
+    tty: true

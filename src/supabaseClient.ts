@@ -4,8 +4,10 @@ import { generateId } from "zoo-ids";
 import { ReplayData } from "~/common/types";
 import { ReplayStub } from "~/state/selectionStore";
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+// const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseUrl = 'https://hfdcnrnqtmolytcbtpmx.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmZGNucm5xdG1vbHl0Y2J0cG14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzgxOTkyODcsImV4cCI6MTk5Mzc3NTI4N30.tzor28ksaYcobFFzhdauJqVaET04SXdPzf608GWlX6Q';
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
